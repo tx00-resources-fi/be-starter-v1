@@ -5,7 +5,7 @@ const getAllCars = async (req, res) => {
   const cars = await Car.find({}).sort({ createdAt: -1 });
   res.status(200).json(cars);
 };
-
+ 
 // POST /cars
 const createCar = async (req, res) => {
   const newCar = await Car.create({ ...req.body });
